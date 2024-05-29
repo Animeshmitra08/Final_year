@@ -20,7 +20,6 @@ import ResetPass from './Pages/ResetPass';
 import DashboardAdmin from './Admin/DashboardAdmin';
 import Users from './Admin/Users';
 import AdminCourse from './Admin/AdminCourse';
-import ProtectedAdminRoute from './Admin/ProtectedAdminRoute';
 import ApplyWithPayment from './Pages/ApplyWithPayment';
 import PhoneNumber from './Authentication/PhoneNumber';
 
