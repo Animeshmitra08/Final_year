@@ -11,10 +11,13 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link,useNavigate } from 'react-router-dom';
 import Alert from '@mui/material/Alert';
-
+import GoogleIcon from '@mui/icons-material/Google';
+import CallIcon from '@mui/icons-material/Call';
 import Card from '@mui/material/Card';
 import SwitchAccessShortcutAddIcon from '@mui/icons-material/SwitchAccessShortcutAdd';
 import { useUserAuth } from './UseAuthContext';
+import Divider from '@mui/material/Divider';
+import Chip from '@mui/material/Chip';
 
 
 function Copyright(props) {
@@ -159,9 +162,20 @@ const resetPass = (e) =>{
             </Grid>
           </Box>
 
-          <Button onClick={handleGoogle}>
-            Google
-          </Button>
+          <Divider>
+            <Chip label="OR" size="small" />
+          </Divider>
+
+          <Box sx={{width:"100%", display:"flex", justifyContent:"space-between", marginTop:"1em"}}>
+            <Button variant='contained' onClick={handleGoogle} sx={{display:"flex", gap:"1em", color:"white"}}>
+                <GoogleIcon/>             
+                <span>Google</span>
+            </Button>
+            <Button variant='contained' onClick={()=>navigate("/phonesignin")}>
+                <CallIcon/>
+              <span>Phone Number</span>
+            </Button>
+          </Box>
         </Card>
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>

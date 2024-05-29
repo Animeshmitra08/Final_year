@@ -22,6 +22,7 @@ import Users from './Admin/Users';
 import AdminCourse from './Admin/AdminCourse';
 import ProtectedAdminRoute from './Admin/ProtectedAdminRoute';
 import ApplyWithPayment from './Pages/ApplyWithPayment';
+import PhoneNumber from './Authentication/PhoneNumber';
 
   
 
@@ -35,6 +36,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage/>}/>
           <Route exact path='/login' element={<Login/>}/>
+          <Route exact path='/phonesignin' element={<PhoneNumber/>}/>
           <Route exact path='/register' element={<SignUp/>}/>
 
           <Route exact path='/dashboard' element={

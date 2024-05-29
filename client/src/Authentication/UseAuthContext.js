@@ -1,4 +1,4 @@
-import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GoogleAuthProvider, RecaptchaVerifier, createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPhoneNumber, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useContext, useState, useEffect } from "react";
 import { auth, database } from "../firebase/firebase";
 import { get, ref } from "firebase/database";
@@ -32,6 +32,8 @@ export function UserAuthContextProvider({children}) {
         const provider = new GoogleAuthProvider();
         return signInWithPopup(auth, provider);
     }
+
+    
 
     function resetPassword(email) {
         return sendPasswordResetEmail(auth, email);
