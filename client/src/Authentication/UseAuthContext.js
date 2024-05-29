@@ -1,7 +1,6 @@
-import { GoogleAuthProvider, RecaptchaVerifier, createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPhoneNumber, signInWithPopup, signOut } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useContext, useState, useEffect } from "react";
-import { auth, database } from "../firebase/firebase";
-import { get, ref } from "firebase/database";
+import { auth } from "../firebase/firebase";
 
 const userAuthContext = createContext();
 
